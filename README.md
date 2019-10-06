@@ -32,7 +32,8 @@ import numpy as np```
 
 ```python
 batch = 59
-np.random.seed(1)```
+np.random.seed(1)
+```
 
 ```python
 pasta = "C:\\Users\\appel\\Desktop\\Pos_Data_Science\\9_Deep_Learning_I\\Projeto\\Artistas\\classes"
