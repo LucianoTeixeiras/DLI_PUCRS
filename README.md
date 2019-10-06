@@ -61,28 +61,33 @@ Total de classes: 11 <br>
 ```python
 dataset.show_batch(rows=3, figsize=(7,6))
 ```
-
+![Amostra aleatória de imagens](https://github.com/appelvini/DLI_PUCRS/blob/master/Capturar.JPG)
 
 ```python
-
+modelo = cnn_learner(dataset, models.resnet34, metrics=accuracy)
 ```
 
 ```python
-
+modelo.fit_one_cycle(4)
+```
+| epoch | train_loss | valid_loss | accuracy | time  |
+|-------|------------|------------|----------|-------|
+| 0     | 2.341908   | 0.934602   | 0.704762 | 01:53 |
+| 1     | 1.527976   | 0.819618   | 0.725714 | 02:06 |
+| 2     | 1.109361   | 0.649435   | 0.794286 | 01:54 |
+| 3     | 0.874055   | 0.628907   | 0.773333 | 01:39 |
+```python
+modelo.save('4Epocas')
 ```
 
 ```python
-
+interpretacao = ClassificationInterpretation.from_learner(modelo)
 ```
 
 ```python
-
+interpretacao.plot_top_losses(9, figsize=(15,11), heatmap=False)
 ```
-
-```python
-
-```
-
+![Mostra os 9 principais erros](https://github.com/appelvini/DLI_PUCRS/blob/master/Anota%C3%A7%C3%A3o%202019-10-06%20180409.jpg)
 ```python
 
 ```
