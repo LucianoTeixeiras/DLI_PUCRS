@@ -30,6 +30,8 @@ import matplotlib.pyplot as plt
 from PIL import Image
 import numpy as np```
 
+```
+
 ```python
 batch = 59
 np.random.seed(1)
