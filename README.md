@@ -1,6 +1,6 @@
 ## Classificação de imagens de pintores/artistas famosos
 
-* artigo de conclusão de cadeira (Deep Learning I) da pós-gradução de Ciência de Dados, da PUC/RS
+* Trabalho de conclusão de cadeira (Deep Learning I) da pós-gradução de Ciência de Dados, da PUC/RS
 <br> Professor: JONATAS WERHMANN
 
 Integrantes do grupo: Daniel Paiva, Carlos Átila e Vinícius Appel
