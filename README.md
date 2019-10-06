@@ -11,6 +11,10 @@ Integrantes do grupo: Daniel Paiva, Carlos Átila e Vinícius Appel
 Execução realizada com a Resnet34, em **4 épocas** <br>
 Total de imagens: 2629
 
+**Modelo Resnet34**
+
+![Amostra aleatória de imagens](https://storage.googleapis.com/kaggle-datasets-images/6978/10038/d9e74a548a8cdca167b38520ac8bf405/data-original.png?t=2017-12-13-20-32-53)
+
 ```python
 %reload_ext autoreload
 %autoreload 2
@@ -168,6 +172,9 @@ Podemos ver que o número total de erros diminuiu, porém o destaque continua o 
 
 Execução realizada com a *Resnet50*, em **10 épocas** <br>
 Total de imagens: 2629
+
+**Modelo squeezenet1_0** <br>
+![Modelo squeezenet1_0](https://pytorch.org/assets/images/squeezenet.png)
 
 ```python
 
