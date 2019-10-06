@@ -148,6 +148,8 @@ interpretacao.plot_confusion_matrix(figsize=(12,12), dpi=60)
 ```
 ![Matriz de confusão](https://github.com/appelvini/DLI_PUCRS/blob/master/Anota%C3%A7%C3%A3o%202019-10-06%20185101.jpg)
 ```python
+### Com 10 épocas tivemos uma acurácia de 81,52%
+Podemos ver que o número total de erros diminuiu, porém o destaque continua o mesmo;
 
 | Correto                 | Classificado    | Qtd |
 |-------------------------|-----------------|-----|
@@ -161,6 +163,11 @@ interpretacao.plot_confusion_matrix(figsize=(12,12), dpi=60)
 | 'Pablo_Picasso'         | 'Paul_Gauguin'  | 3   |
 | 'Paul_Gauguin'          | 'Edgar_Degas'   | 3   |
 ```
+
+### Execução 03
+
+Execução realizada com a *Resnet50*, em **10 épocas** <br>
+Total de imagens: 2629
 
 ```python
 
