@@ -13,7 +13,7 @@ Total de imagens: 2629
 
 **Modelo Resnet34**
 
-![Amostra aleatória de imagens](https://storage.googleapis.com/kaggle-datasets-images/6978/10038/d9e74a548a8cdca167b38520ac8bf405/data-original.png?t=2017-12-13-20-32-53)
+![Resnet34](https://www.researchgate.net/profile/Aaron_Vose/publication/330400293/figure/fig6/AS:715395283558403@1547574935970/ResNet-neural-network-architecture-ResNet-34-pictured-image-from-11.ppm)
 
 ```python
 %reload_ext autoreload
