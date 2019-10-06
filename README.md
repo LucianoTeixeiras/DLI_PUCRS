@@ -152,7 +152,7 @@ interpretacao.plot_confusion_matrix(figsize=(12,12), dpi=60)
 ```
 ![Matriz de confusão](https://github.com/appelvini/DLI_PUCRS/blob/master/Anota%C3%A7%C3%A3o%202019-10-06%20185101.jpg)
 ```python
-### Com 10 épocas tivemos uma acurácia de 81,52%
+### Com 10 épocas tivemos uma acurácia de **81,52%**
 Podemos ver que o número total de erros diminuiu, porém o destaque continua o mesmo;
 
 | Correto                 | Classificado    | Qtd |
@@ -170,19 +170,36 @@ Podemos ver que o número total de erros diminuiu, porém o destaque continua o 
 
 ### Execução 03
 
-Execução realizada com a *Resnet50*, em **10 épocas** <br>
+Execução realizada com a *squeezenet1_0*, em **8 épocas** <br>
 Total de imagens: 2629
 
 **Modelo squeezenet1_0** <br>
 ![Modelo squeezenet1_0](https://pytorch.org/assets/images/squeezenet.png)
 
 ```python
+modelo = cnn_learner(dataset, models.squeezenet1_0, metrics=accuracy)
 
+modelo.fit_one_cycle(8)
 ```
 
+| epoch | train_loss | valid_loss | accuracy | time  |
+|-------|------------|------------|----------|-------|
+| 0     | 2.447169   | 1.314411   | 0.600000 | 01:31 |
+| 1     | 1.554746   | 0.925522   | 0.729524 | 01:30 |
+| 2     | 1.178366   | 0.843570   | 0.760000 | 01:31 |
+| 3     | 0.938747   | 0.796989   | 0.752381 | 01:32 |
+| 4     | 0.750881   | 0.733911   | 0.761905 | 01:35 |
+| 5     | 0.610888   | 0.653338   | 0.784762 | 01:31 |
+| 6     | 0.532116   | 0.645012   | 0.786667 | 01:30 |
+| 7     | 0.452528   | 0.641234   | 0.788571 | 01:31 |
 ```python
-
+interpretacao.plot_confusion_matrix(figsize=(12,12), dpi=60)
 ```
+
+![Matriz de confusão](https://github.com/appelvini/DLI_PUCRS/blob/master/Anota%C3%A7%C3%A3o%202019-10-06%20193800.jpg)
+
+Com a arquitetura Squeezenet tivemos uma acurácia de **78,85%**
+
 
 ```python
 
