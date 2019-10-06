@@ -7,6 +7,10 @@ Integrantes do grupo: Daniel Paiva, Carlos Átila e Vinícius Appel
 
 
 ### Execução 01
+
+Execução realizada com a Resnet34, em **4 épocas** <br>
+Total de imagens: 2629
+
 ```python
 %reload_ext autoreload
 %autoreload 2
@@ -88,6 +92,85 @@ interpretacao = ClassificationInterpretation.from_learner(modelo)
 interpretacao.plot_top_losses(9, figsize=(15,11), heatmap=False)
 ```
 ![Mostra os 9 principais erros](https://github.com/appelvini/DLI_PUCRS/blob/master/Anota%C3%A7%C3%A3o%202019-10-06%20180409.jpg)
+```python
+interpretacao.plot_confusion_matrix(figsize=(12,12), dpi=60)
+```
+![Matriz de confusão](https://github.com/appelvini/DLI_PUCRS/blob/master/Anota%C3%A7%C3%A3o%202019-10-06%20180746.jpg)
+
+### Com 4 épocas tivemos uma acurácia de 77,33%
+Podemos verificar que houveram alguns erros na validação, com destaque para imagens que eram de Rembrandt, mas foram classificados erroneamente como Titian (7 casos);
+
+| Correto                 | Classificado       | Qtd |
+|-------------------------|--------------------|-----|
+| 'Rembrandt'             | 'Titian'           | 7   |
+| 'Francisco_Goya'        | 'Titian'           | 6   |
+| 'Paul_Gauguin'          | 'Pablo_Picasso'    | 6   |
+| 'Titian'                | 'Rembrandt'        | 6   |
+| 'Pierre-Auguste_Renoir' | 'Edgar_Degas'      | 5   |
+| 'Rembrandt'             | 'Francisco_Goya'   | 5   |
+| 'Pablo_Picasso'         | 'Vincent_van_Gogh' | 4   |
+| 'Vincent_van_Gogh'      | 'Alfred_Sisley'    | 4   |
+| 'Vincent_van_Gogh'      | 'Pablo_Picasso'    | 4   |
+
+
+### Execução 02
+
+Execução realizada com a Resnet34, em **10 épocas** <br>
+Total de imagens: 2629
+
+```python
+modelo.fit_one_cycle(10)
+```
+
+| epoch | train_loss | valid_loss | accuracy | time  |
+|-------|------------|------------|----------|-------|
+| 0     | 0.681377   | 0.758513   | 0.771429 | 01:39 |
+| 1     | 0.637672   | 0.735984   | 0.790476 | 01:41 |
+| 2     | 0.609460   | 0.762438   | 0.779048 | 01:35 |
+| 3     | 0.592992   | 0.756005   | 0.761905 | 01:35 |
+| 4     | 0.546762   | 0.725455   | 0.794286 | 01:33 |
+| 5     | 0.494583   | 0.688622   | 0.788571 | 01:33 |
+| 6     | 0.457078   | 0.654186   | 0.794286 | 01:34 |
+| 7     | 0.428280   | 0.624490   | 0.805714 | 01:36 |
+| 8     | 0.375367   | 0.622810   | 0.819048 | 01:34 |
+| 9     | 0.369685   | 0.615050   | 0.815238 | 01:33 |
+```python
+interpretacao = ClassificationInterpretation.from_learner(modelo)
+
+interpretacao.plot_top_losses(9, figsize=(15,11), heatmap=False)
+```
+![Amostra aleatória de imagens](https://github.com/appelvini/DLI_PUCRS/blob/master/Anota%C3%A7%C3%A3o%202019-10-06%20184917.jpg)
+```python
+interpretacao.plot_confusion_matrix(figsize=(12,12), dpi=60)
+```
+![Matriz de confusão](https://github.com/appelvini/DLI_PUCRS/blob/master/Anota%C3%A7%C3%A3o%202019-10-06%20185101.jpg)
+```python
+
+| Correto                 | Classificado    | Qtd |
+|-------------------------|-----------------|-----|
+| 'Rembrandt',            | 'Titian'        | 7   |
+| 'Paul_Gauguin'          | 'Alfred_Sisley' | 5   |
+| 'Pierre-Auguste_Renoir' | 'Edgar_Degas'   | 5   |
+| 'Pierre-Auguste_Renoir' | 'Alfred_Sisley' | 4   |
+| 'Titian'                | 'Rembrandt'     | 4   |
+| 'Francisco_Goya'        | 'Rembrandt'     | 3   |
+| 'Pablo_Picasso'         | 'Edgar_Degas'   | 3   |
+| 'Pablo_Picasso'         | 'Paul_Gauguin'  | 3   |
+| 'Paul_Gauguin'          | 'Edgar_Degas'   | 3   |
+```
+
+```python
+
+```
+
+```python
+
+```
+
+```python
+
+```
+
 ```python
 
 ```
