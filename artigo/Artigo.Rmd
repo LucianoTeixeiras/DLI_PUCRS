@@ -5,7 +5,7 @@ affiliation:
   # wide: true                  ## one column wide author/affiliation fields
 
   institution:
-    - name: Carlo Átila
+    - name: Carlo Átila Abreu
       location: carlosatilaabreu@gmail.com
       mark: 1
       author:
