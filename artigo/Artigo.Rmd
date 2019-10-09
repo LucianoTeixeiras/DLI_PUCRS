@@ -24,13 +24,14 @@ output: rticles::ieee_article
 
 **Introdução**
 =============
-Dentre as diversas ferramentas e estudos que compreendem os estudos de Ciências de Dados, temos o estudo de deep learning (aprendizagem de máquina) baseado em um conjunto de algoritmos que tentam modelar abstrações de dados em alto nível, afim de criar modelos que possam vir a criar padrões de classificações para a gama de dados.
-
-
 A pintura acompanha a humanidade desde os primórdios, cerca de 40.000 anos A.C, sendo marcado como o início da pré-escrita. A pintura tem seu grande ápice desde o período medieval, até o séculos XX. Neste tempo tendo grandes autores, como Leonardo Da Vinci, Michelangelo, Vincent Van Gogh entre outros.
 
+Neste contexto de vários pintores e obras, cada pintor destaca-se pelo estilo único de traço e por técnicas aplicadas em suas pinturas. Contudo, mesmo com  todas essas nuancias e estilos pertinentes a cada pintor, mesmo em dias atuais, é um grande desafio para amantes e não amantes de pinturasidentificar claramente quem é o pintor de uma obra de arte simplesmente ao vê-la.
 
-Neste contexto, de vários pintores e obras, cada pintor marcou-se por traços e técnicas para realizarem suas pinturas, sendo de grande dificuldade para pessoas que não compreendem muitas vezes a arte a diferenciarem as obras realizadas. Tendo em vista este desafio, este trabalho procurou identificar e criar padrões que possam identificar cada obra para cada devido artista. Juntamente com as técnicas de classificação obtidos nos estudos de deep learning este trabalho visa proporcionar a classificação de cada imagem das obras dos autores para que possamos identificar a quem pertence, deixando assim um estudo de compreensão da arte mais tangível para quem não está familiarizado.
+Este trabalho tem como objetivo apresentar uma solução para tal desafio. A solução técnica proposta tem como base a utilização de algoritmos e técnicas de [Deep Learning](https://pt.wikipedia.org/wiki/Aprendizagem_profunda) para ajudar na descoberta autoria de cada obra baseada em uma imagem. 
+
+Vale salientar que a solução técnica proposta vai muito além de apenas aplicar algoritmos de Deep Learning. Uma vez que é necessário uma base de dados para que algoritmos "aprender", Se faz necessário uma base de dados normalizada , anotada corretamente e coesa. Para alcançar 
+esse requisito, técnicas e procedimentos relacionados a [Data Science](https://pt.wikipedia.org/wiki/Ci%C3%AAncia_de_dados)
 
 
 Assim nas próximas etapas, iremos demonstrar as etapas que o trabalho nos levou para a descoberta de modelos de classificação.
