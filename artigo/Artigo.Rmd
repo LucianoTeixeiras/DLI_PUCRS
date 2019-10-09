@@ -17,7 +17,7 @@ affiliation:
       location: appelvini@gmail.com
       mark: 3
 abstract: |
-  The purpose of this work, is to classify the best works of old painters, the objective of easily identifying paintings that may have divergences between art connoisseurs, in order to assist in the identification for the correct classification. Then we want to classify the works for each author through machine learning.
+  The article is the final work to Deep Learning discipline from Data Science Specialization Course. The article shows algorithms that uses Neural Networks specifics to computer vision to classify an image dataset. An image dataset with paints of renamed painters such as: Albrecht_Dürer, Alfred_Sisley, Edgar_Degas, Francisco_Goya, Marc_Chagall, Pablo_Picasso, Paul_Gauguin, Pierre-Auguste_Renoir, Rembrandt, Titian,Vincent_van_Gogh is used. The main objective is to identify the painter based on an given image.
 
 output: rticles::ieee_article
 ---
